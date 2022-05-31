@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>{{title}}</h1>
+<div class="product_form col-sm-6">
+    <form method="post">
+        <div class="form-group">
+            <label for="news_title" class="text-dark">Загголовок новости</label>
+            <input type="text" name="news_title" placeholder="Введите заголовок новости" class="form-control"
+                   value="{{ request.form['news_title'] }}">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="news_text" class="text-dark">Текст новости</label>
+            <input type="text" name="news_text" placeholder="Введите текст новости" class="form-control"
+                   value="{{ request.form['news_text'] }}">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="news_photo" class="text-dark">Фотография изделия</label>
+            <input type="text" name="news_photo" placeholder="Добавьте URL фотографии новости" class="form-control"
+                   value="{{ request.form['news_photo'] }}">
+        </div>
+        <br>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Записать</button>
+        </div>
+    </form>
+    </div>
+{% endblock %}

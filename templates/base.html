@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {% block head %}
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        {% block styles %}
+            <!-- Bootstrap CSS -->
+            {{ bootstrap.load_css() }}
+        {% endblock %}
+
+        <title>{{ title }}</title>
+        <link rel="stylesheet" href="/static/css/style.css">
+    {% endblock %}
+</head>
+<body>
+{% block nav %}
+    <nav class="nav">
+        <li><a href="{{ url_for('index') }}">Главная</a></li>
+        <li><a href="{{ url_for('culture') }}">Культура</a></li>
+        <li><a href="{{ url_for('events') }}">События</a></li>
+        <li><a href="{{ url_for('news') }}">Новости</a></li>
+        <li><a href="{{ url_for('forum') }}">Форум</a></li>
+        <li><a href="{{ url_for('about') }}">О проекте</a></li>
+    </nav>
+
+{% endblock %}
+<!-- Your page content -->
+{% block content %}{% endblock %}
+
+{% block scripts %}
+    <!-- Optional JavaScript -->
+    {{ bootstrap.load_js() }}
+{% endblock %}
+</body>
+</html>

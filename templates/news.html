@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>ВелоНовости</h1>
+    <hr>
+    <div class="pic">
+        <img src="/static/img/pic6.jpg" alt="">
+    </div>
+
+
+    <div class="product">
+        {% for n in news %}
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="card">
+                        <img src="{{ n['news_photo'] }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ n['news_title'] }}</h5>
+                            <p class="card-text">{{ n['news_text'] }}</p>
+                        </div>
+                    </div>
+                </div>
+
+{#            <div class="card" style="width: 20rem;">#}
+{#                <h5 class="card-title">{{ n['news_title'] }}</h5>#}
+{#                <hr>#}
+{#                <img src="{{ n['news_photo'] }}" class="card-img-top" alt="...">#}
+{#                <div class="card-body">#}
+{##}
+{#                    <p class="card-text">{{ n['news_text'] }}</p>#}
+{#                    <hr>#}
+{##}
+{#                </div>#}
+{#            </div>#}
+{#            </div>#}
+
+
+
+        {% endfor %}
+
+
+
+
+{% endblock %}

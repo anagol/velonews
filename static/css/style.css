@@ -1,0 +1,61 @@
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-family: "Arial Narrow", sans-serif;
+}
+
+.nav {
+    margin-top: 50px;
+    text-align: center;
+    justify-content: space-around;
+    background: black;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav li a{
+    text-decoration: none;
+    color: orange;
+    font-weight: 700;
+}
+.nav li a:hover{
+    color: darkorange;
+}
+
+.nav li {
+    list-style-type: none;
+    padding: 15px;
+    font-family: "Arial Narrow",sans-serif;
+}
+
+hr{
+    box-shadow: black 2px 1px;
+}
+.pic{
+    text-align: center;
+}
+img{
+    width: 70%;
+    height: auto;
+}
+
+.card {
+    display: inline-grid;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 5px;
+    text-align: center;
+}
+.card:hover {
+    box-shadow: 0 0 20px rgba(60, 59, 139, 0.9);;
+}
+
+.product {
+    /*display: inline-flex;*/
+    column-width: 250px;
+    column-gap: 15px;
+    width: 100%;
+    max-width: 1600px;
+    margin: 10px auto;
+}
